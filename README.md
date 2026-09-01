@@ -4,7 +4,7 @@ Cashtag attention topology for X.
 
 Not a sentiment dashboard. Not a price predictor.
 
-`$GRAPH` v0.2 ships **three detectors plus a publish path** on one snapshot:
+`$GRAPH` v0.3 turns one evidence snapshot into an interactive campaign radar:
 
 1. **Co-occurrence graph** — which cashtags travel together
 2. **Piggyback radar** — illiquid / unknown tickers hitchhiking on mega cashtags
@@ -13,6 +13,9 @@ Not a sentiment dashboard. Not a price predictor.
 5. **Origins** — earliest non-reply posts in the current batch
 6. **GitHub Pages** — fixture report published from Actions
 7. **Official X API adapter** — optional, fails closed without `X_BEARER_TOKEN`
+8. **Campaign replay** — scrub or play the sequence that formed the graph
+9. **Organic comparison** — remove flagged coordinated posts and compare the topology
+10. **Cost guardrail** — hard cap paid X reads per run
 
 ## What this is not
 
@@ -34,6 +37,9 @@ cashgraph --source fixture --out data/out
 
 Open `data/out/index.html`.
 
+The generated report is self-contained: interactive graph, timeline replay, campaign evidence,
+and an organic-only comparison work without a server or third-party JavaScript.
+
 Second run against the same `--store data/state.sqlite` is when first-timer counts stop being “everyone is new.”
 
 ## GitHub Pages
@@ -54,6 +60,10 @@ export X_BEARER_TOKEN=...
 pip install -e ".[dev,xapi]"
 cashgraph --source xapi --tickers NVDA,TSLA,AAPL,BTC --min-faves 5 --out data/out
 ```
+
+Live X collection is bring-your-own-token and opt-in. `--max-total-posts 500` is the default
+hard ceiling per run; lower it to match your budget. Cashgraph never purchases credits or
+silently switches from fixture data to paid collection.
 
 Tunables live in `data/xapi.json` (`query_suffix`, `min_faves`, pages, max results). Missing token → hard fail. 401/403/429 → hard fail with a readable reason.
 

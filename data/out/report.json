@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T16:38:23.762296Z",
+  "generated_at": "2026-09-01T17:29:53.102137Z",
   "window_hours": 6,
   "source": "fixture",
   "nodes": [
@@ -535,6 +535,212 @@
       "text": "$TSLA add"
     }
   ],
+  "events": [
+    {
+      "post_id": "1",
+      "author_handle": "chip_notes",
+      "created_at": "2026-09-01T12:01:00Z",
+      "text": "Inference demand still the core of the $NVDA thesis. Supply chain tell is $TSM and $AVGO.",
+      "cashtags": [
+        "NVDA",
+        "TSM",
+        "AVGO"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "2",
+      "author_handle": "semi_desk",
+      "created_at": "2026-09-01T12:20:00Z",
+      "text": "$NVDA $TSM $SMCI — rack buildouts slipping but bookings are not.",
+      "cashtags": [
+        "NVDA",
+        "TSM",
+        "SMCI"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "3",
+      "author_handle": "alerts4u",
+      "created_at": "2026-09-01T12:22:00Z",
+      "text": "$NVDA $PUMP moon setup join my room",
+      "cashtags": [
+        "NVDA",
+        "PUMP"
+      ],
+      "coordinated": true
+    },
+    {
+      "post_id": "4",
+      "author_handle": "signalsdaily",
+      "created_at": "2026-09-01T12:23:00Z",
+      "text": "Huge breakout $NVDA $PUMP $XYZQ",
+      "cashtags": [
+        "NVDA",
+        "PUMP",
+        "XYZQ"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "5",
+      "author_handle": "free_calls",
+      "created_at": "2026-09-01T12:24:00Z",
+      "text": "$TSLA $PUMP last chance",
+      "cashtags": [
+        "TSLA",
+        "PUMP"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "14",
+      "author_handle": "room_alpha",
+      "created_at": "2026-09-01T12:25:00Z",
+      "text": "$TSLA $XYZQ moon setup join my room",
+      "cashtags": [
+        "TSLA",
+        "XYZQ"
+      ],
+      "coordinated": true
+    },
+    {
+      "post_id": "15",
+      "author_handle": "room_bravo",
+      "created_at": "2026-09-01T12:26:00Z",
+      "text": "https://spam.example $AAPL $PUMP moon setup join my room",
+      "cashtags": [
+        "AAPL",
+        "PUMP"
+      ],
+      "coordinated": true
+    },
+    {
+      "post_id": "6",
+      "author_handle": "first_time_nvda",
+      "created_at": "2026-09-01T13:00:00Z",
+      "text": "just opened $NVDA after that clip. also watching $ARM",
+      "cashtags": [
+        "NVDA",
+        "ARM"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "7",
+      "author_handle": "lurker99",
+      "created_at": "2026-09-01T13:05:00Z",
+      "text": "$NVDA going parabolic?",
+      "cashtags": [
+        "NVDA"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "8",
+      "author_handle": "index_only",
+      "created_at": "2026-09-01T13:10:00Z",
+      "text": "$SPY and $QQQ both bid into the close. $AAPL dead money.",
+      "cashtags": [
+        "SPY",
+        "QQQ",
+        "AAPL"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "9",
+      "author_handle": "onchain_sam",
+      "created_at": "2026-09-01T13:12:00Z",
+      "text": "$SOL funding flipped. $BTC lagging.",
+      "cashtags": [
+        "SOL",
+        "BTC"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "10",
+      "author_handle": "noise",
+      "created_at": "2026-09-01T13:13:00Z",
+      "text": "wrong $NVDA is finished",
+      "cashtags": [
+        "NVDA"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "11",
+      "author_handle": "value_acct",
+      "created_at": "2026-09-01T13:15:00Z",
+      "text": "Still prefer $BRK.B over most of this circus.",
+      "cashtags": [
+        "BRK.B"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "12",
+      "author_handle": "xyzq_bot",
+      "created_at": "2026-09-01T13:16:00Z",
+      "text": "$AAPL $XYZQ undervalued gem",
+      "cashtags": [
+        "AAPL",
+        "XYZQ"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "13",
+      "author_handle": "xyzq_bot2",
+      "created_at": "2026-09-01T13:17:00Z",
+      "text": "why isn't anyone talking $AAPL $XYZQ",
+      "cashtags": [
+        "AAPL",
+        "XYZQ"
+      ],
+      "coordinated": false
+    },
+    {
+      "post_id": "16",
+      "author_handle": "spray_cannon",
+      "created_at": "2026-09-01T13:40:00Z",
+      "text": "$NVDA add",
+      "cashtags": [
+        "NVDA"
+      ],
+      "coordinated": true
+    },
+    {
+      "post_id": "17",
+      "author_handle": "spray_cannon",
+      "created_at": "2026-09-01T13:41:00Z",
+      "text": "$TSLA add",
+      "cashtags": [
+        "TSLA"
+      ],
+      "coordinated": true
+    },
+    {
+      "post_id": "18",
+      "author_handle": "spray_cannon",
+      "created_at": "2026-09-01T13:42:00Z",
+      "text": "$AAPL add",
+      "cashtags": [
+        "AAPL"
+      ],
+      "coordinated": true
+    }
+  ],
+  "summary": {
+    "posts": 18,
+    "authors": 16,
+    "coordinated_posts": 6,
+    "coordinated_share": 0.333,
+    "campaigns": 2,
+    "piggybacks": 2
+  },
   "warnings": [
     "every author looks like a first-timer — store was empty. run again over days before trusting unique_delta",
     "2 farm cluster(s) — treat unique_author counts as inflated"

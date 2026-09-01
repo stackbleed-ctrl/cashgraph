@@ -2,5 +2,6 @@
   "query_suffix": "-is:retweet lang:en",
   "min_faves": 0,
   "max_results_per_ticker": 50,
-  "pages": 2
+  "pages": 2,
+  "max_total_posts": 500
 }

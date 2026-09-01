@@ -1,6 +1,6 @@
 [project]
 name = "cashgraph"
-version = "0.2.0"
+version = "0.3.0"
 description = "Cashtag attention topology: graph, piggyback radar, farm clusters, first-timer spikes."
 readme = "README.md"
 requires-python = ">=3.11"

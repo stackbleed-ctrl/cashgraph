@@ -6,7 +6,7 @@ from pathlib import Path
 from cashgraph.collectors import Collector
 from cashgraph.farms import detect_farms
 from cashgraph.graph import annotate, build_edges, build_nodes
-from cashgraph.models import Snapshot
+from cashgraph.models import RadarEvent, RadarSummary, Snapshot
 from cashgraph.origins import earliest_origins
 from cashgraph.piggyback import detect_piggybacks
 from cashgraph.store import AuthorStore, attach_first_timers
@@ -43,6 +43,28 @@ def run_pipeline(
     if farms:
         warnings.append(f"{len(farms)} farm cluster(s) — treat unique_author counts as inflated")
 
+    coordinated_ids = {post_id for farm in farms for post_id in farm.post_ids}
+    events = [
+        RadarEvent(
+            post_id=item.post.id,
+            author_handle=item.post.author_handle,
+            created_at=item.post.created_at,
+            text=item.post.text,
+            cashtags=item.cashtags,
+            coordinated=item.post.id in coordinated_ids,
+        )
+        for item in sorted(items, key=lambda row: row.post.created_at)
+    ]
+    coordinated_posts = sum(event.coordinated for event in events)
+    summary = RadarSummary(
+        posts=len(posts),
+        authors=len({post.author_id for post in posts}),
+        coordinated_posts=coordinated_posts,
+        coordinated_share=round(coordinated_posts / len(posts), 3) if posts else 0.0,
+        campaigns=len(farms),
+        piggybacks=len(piggy),
+    )
+
     return Snapshot(
         generated_at=datetime.now(timezone.utc),
         window_hours=window_hours,
@@ -52,5 +74,7 @@ def run_pipeline(
         piggybacks=piggy,
         farms=farms,
         origins=origins,
+        events=events,
+        summary=summary,
         warnings=warnings,
     )

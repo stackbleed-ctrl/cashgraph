@@ -55,6 +55,7 @@ class XApiCollector:
         max_results: int = 50,
         min_faves: int = 0,
         pages: int = 2,
+        max_total_posts: int = 500,
         token: str | None = None,
         config_path: Path | None = None,
     ):
@@ -66,6 +67,9 @@ class XApiCollector:
         self.max_results = int(cfg.get("max_results_per_ticker", max_results))
         self.min_faves = int(cfg.get("min_faves", min_faves))
         self.pages = int(cfg.get("pages", pages))
+        self.max_total_posts = int(cfg.get("max_total_posts", max_total_posts))
+        if self.max_total_posts < 1:
+            raise ValueError("max_total_posts must be at least 1")
         self.query_suffix = cfg.get("query_suffix", "-is:retweet lang:en")
         self.token = token if token is not None else os.environ.get("X_BEARER_TOKEN", "")
 
@@ -85,6 +89,8 @@ class XApiCollector:
         with httpx.Client(timeout=30.0) as client:
             for tag in self.cashtags:
                 posts.extend(self._search_tag(client, headers, tag, seen))
+                if len(posts) >= self.max_total_posts:
+                    return posts[: self.max_total_posts]
         return posts
 
     def _search_tag(self, client, headers: dict, tag: str, seen: set[str]) -> list[Post]:
@@ -113,6 +119,8 @@ class XApiCollector:
             data = r.json()
             users = {u["id"]: u for u in data.get("includes", {}).get("users", [])}
             for t in data.get("data", []):
+                if len(seen) >= self.max_total_posts:
+                    return out
                 if t["id"] in seen:
                     continue
                 seen.add(t["id"])

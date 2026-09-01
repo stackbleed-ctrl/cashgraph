@@ -22,6 +22,12 @@ def main(argv: list[str] | None = None) -> int:
     )
     p.add_argument("--min-faves", type=int, default=0)
     p.add_argument("--max-results", type=int, default=50)
+    p.add_argument(
+        "--max-total-posts",
+        type=int,
+        default=500,
+        help="hard ceiling for paid X post reads per run (default: 500)",
+    )
     args = p.parse_args(argv)
 
     if args.source == "fixture":
@@ -36,6 +42,7 @@ def main(argv: list[str] | None = None) -> int:
             tags,
             max_results=args.max_results,
             min_faves=args.min_faves,
+            max_total_posts=args.max_total_posts,
         )
 
     snap = run_pipeline(collector, args.store, args.window_hours)

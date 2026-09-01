@@ -83,6 +83,24 @@ class FarmCluster(BaseModel):
     reason: str
 
 
+class RadarEvent(BaseModel):
+    post_id: str
+    author_handle: str
+    created_at: datetime
+    text: str
+    cashtags: list[str]
+    coordinated: bool = False
+
+
+class RadarSummary(BaseModel):
+    posts: int
+    authors: int
+    coordinated_posts: int
+    coordinated_share: float
+    campaigns: int
+    piggybacks: int
+
+
 class Snapshot(BaseModel):
     generated_at: datetime
     window_hours: int
@@ -92,4 +110,6 @@ class Snapshot(BaseModel):
     piggybacks: list[PiggybackHit]
     farms: list[FarmCluster] = Field(default_factory=list)
     origins: list[Origin] = Field(default_factory=list)
+    events: list[RadarEvent] = Field(default_factory=list)
+    summary: RadarSummary
     warnings: list[str] = Field(default_factory=list)

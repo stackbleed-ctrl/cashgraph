@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import html
+import json
 from pathlib import Path
 
 from cashgraph.models import Snapshot
@@ -26,12 +27,45 @@ TEMPLATE = """<!DOCTYPE html>
   .illiquid { color:#f87171; }
   .tag { color:#7dd3fc; }
   .farm { color:#fb923c; }
+  * { box-sizing:border-box; }
+  body { background:radial-gradient(circle at 80% -10%,#15324a 0,transparent 34%),#070a0d; }
+  .shell { max-width:1200px; margin:auto; }
+  .eyebrow { color:#7dd3fc; letter-spacing:.18em; text-transform:uppercase; font-size:11px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:10px; margin:24px 0; }
+  .card,.panel { background:#0d1319dd; border:1px solid #1c2b36; border-radius:14px; box-shadow:0 16px 40px #0005; }
+  .card { padding:16px; }
+  .card b { display:block; font-size:26px; color:#fff; margin-top:7px; }
+  .panel { padding:16px; margin:14px 0; overflow:hidden; }
+  .controls { display:flex; flex-wrap:wrap; align-items:center; gap:14px; margin-bottom:12px; }
+  .controls button { background:#102b3b; color:#7dd3fc; border:1px solid #24506a; border-radius:8px; padding:8px 12px; }
+  input[type=range] { width:100%; accent-color:#38bdf8; }
+  #graph { width:100%; min-height:420px; display:block; }
+  .edge { stroke:#2c4d60; stroke-opacity:.65; }
+  .node { stroke:#071018; stroke-width:3; cursor:pointer; }
+  .node-label { fill:#dbeafe; font-size:11px; pointer-events:none; text-anchor:middle; }
+  .event { border-left:3px solid #334155; padding:8px 10px; margin:7px 0; background:#0a0f14; }
+  .event.coordinated { border-color:#fb923c; }
+  .pill { display:inline-block; border:1px solid #334155; border-radius:99px; padding:2px 7px; margin-right:5px; font-size:10px; }
+  .split { display:grid; grid-template-columns:1.45fr 1fr; gap:14px; }
+  @media(max-width:800px){ .split{grid-template-columns:1fr} #graph{min-height:330px} }
 </style>
 </head>
 <body>
+<main class="shell">
+<div class="eyebrow">campaign intelligence · evidence first</div>
 <h1>$GRAPH</h1>
 <p class="muted">generated __GENERATED__ · source __SOURCE__ · window __WINDOW__h · attention topology, not a price forecast</p>
 __WARNINGS__
+<section class="cards">
+<div class="card"><span class="muted">posts</span><b id="m-posts">0</b></div>
+<div class="card"><span class="muted">authors</span><b id="m-authors">0</b></div>
+<div class="card"><span class="muted">campaign signals</span><b id="m-campaigns">0</b></div>
+<div class="card"><span class="muted">coordinated share</span><b id="m-share">0%</b></div>
+</section>
+<div class="split">
+<section class="panel"><div class="controls"><strong>attention graph</strong><label><input id="organic" type="checkbox"> exclude coordinated posts</label></div><svg id="graph" viewBox="0 0 760 440"></svg><p id="graph-note" class="muted">Select a node to inspect its connections.</p></section>
+<section class="panel"><div class="controls"><strong>campaign replay</strong><button id="play">▶ play</button></div><input id="timeline" type="range" min="0" value="0" step="1"><p id="clock" class="muted"></p><div id="events"></div></section>
+</div>
 <h2>nodes</h2>
 <table>
 <tr><th>cashtag</th><th>mentions</th><th>unique</th><th>first-timers</th><th>ft share</th><th>Δ vs ~7d/7</th><th>flags</th></tr>
@@ -57,6 +91,18 @@ __FARMS__
 <tr><th>cashtag</th><th>when</th><th>account</th><th>likes</th><th>text</th></tr>
 __ORIGINS__
 </table>
+<script id="cashgraph-data" type="application/json">__DATA__</script>
+<script>
+const D=JSON.parse(document.getElementById('cashgraph-data').textContent),$=id=>document.getElementById(id);
+$('m-posts').textContent=D.summary.posts;$('m-authors').textContent=D.summary.authors;$('m-campaigns').textContent=D.summary.campaigns;$('m-share').textContent=Math.round(D.summary.coordinated_share*100)+'%';
+const slider=$('timeline');slider.max=Math.max(0,D.events.length-1);slider.value=slider.max;let timer=null;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function visible(){return D.events.slice(0,Number(slider.value)+1).filter(e=>!$('organic').checked||!e.coordinated)}
+function graph(events){const counts={},pairs={};events.forEach(e=>{e.cashtags.forEach(t=>counts[t]=(counts[t]||0)+1);for(let i=0;i<e.cashtags.length;i++)for(let j=i+1;j<e.cashtags.length;j++){const k=[e.cashtags[i],e.cashtags[j]].sort().join('|');pairs[k]=(pairs[k]||0)+1}});const names=Object.keys(counts).sort((a,b)=>counts[b]-counts[a]).slice(0,18),pos={},cx=380,cy=220,rad=155;names.forEach((n,i)=>{const a=2*Math.PI*i/names.length-Math.PI/2;pos[n]=[cx+Math.cos(a)*rad,cy+Math.sin(a)*rad]});let out='';Object.entries(pairs).forEach(([k,w])=>{const[a,b]=k.split('|');if(pos[a]&&pos[b])out+=`<line class="edge" x1="${pos[a][0]}" y1="${pos[a][1]}" x2="${pos[b][0]}" y2="${pos[b][1]}" stroke-width="${Math.min(8,1+w)}"/>`});names.forEach(n=>{const[x,y]=pos[n],meta=D.nodes.find(v=>v.cashtag===n)||{},color=meta.illiquid?'#f87171':meta.mega?'#34d399':'#38bdf8',r=10+Math.min(20,counts[n]*2);out+=`<circle class="node" data-name="${esc(n)}" cx="${x}" cy="${y}" r="${r}" fill="${color}"/><text class="node-label" x="${x}" y="${y+r+16}">$${esc(n)}</text>`});$('graph').innerHTML=out||'<text x="380" y="220" text-anchor="middle" fill="#8b98a5">No activity</text>';document.querySelectorAll('.node').forEach(n=>n.onclick=()=>{const name=n.dataset.name,links=Object.entries(pairs).filter(([k])=>k.split('|').includes(name)).sort((a,b)=>b[1]-a[1]).slice(0,5);$('graph-note').textContent=`$${name}: ${counts[name]} visible mentions · `+(links.map(([k,w])=>'$'+k.split('|').find(x=>x!==name)+' ×'+w).join(' · ')||'no co-occurrences')})}
+function render(){const rows=visible(),latest=D.events[Number(slider.value)];$('clock').textContent=latest?new Date(latest.created_at).toLocaleString():'no activity';$('events').innerHTML=rows.slice(-7).reverse().map(e=>`<div class="event ${e.coordinated?'coordinated':''}"><span class="pill">@${esc(e.author_handle)}</span>${e.cashtags.map(t=>`<span class="pill">$${esc(t)}</span>`).join('')}<div>${esc(e.text)}</div></div>`).join('')||'<p class="muted">No events in this view.</p>';graph(rows)}
+slider.oninput=render;$('organic').onchange=render;$('play').onclick=()=>{if(timer){clearInterval(timer);timer=null;$('play').textContent='▶ play';return}slider.value=0;$('play').textContent='■ stop';timer=setInterval(()=>{if(Number(slider.value)>=Number(slider.max)){clearInterval(timer);timer=null;$('play').textContent='▶ play';return}slider.value=Number(slider.value)+1;render()},650)};render();
+</script>
+</main>
 </body></html>
 """
 
@@ -113,6 +159,7 @@ def write_report(snap: Snapshot, out_dir: Path) -> tuple[Path, Path]:
         .replace("__PIGGY__", piggy)
         .replace("__FARMS__", farms)
         .replace("__ORIGINS__", origins)
+        .replace("__DATA__", json.dumps(snap.model_dump(mode="json")).replace("</", "<\\/"))
     )
     html_path.write_text(page)
     return json_path, html_path
