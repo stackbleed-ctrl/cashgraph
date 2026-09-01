@@ -1,0 +1,24 @@
+{
+  "assets": [
+    {"cashtag": "AAPL", "name": "Apple", "asset_class": "equity", "mega": true, "illiquid": false},
+    {"cashtag": "TSLA", "name": "Tesla", "asset_class": "equity", "mega": true, "illiquid": false},
+    {"cashtag": "NVDA", "name": "NVIDIA", "asset_class": "equity", "mega": true, "illiquid": false},
+    {"cashtag": "MSFT", "name": "Microsoft", "asset_class": "equity", "mega": true, "illiquid": false},
+    {"cashtag": "AMZN", "name": "Amazon", "asset_class": "equity", "mega": true, "illiquid": false},
+    {"cashtag": "GOOG", "name": "Alphabet", "asset_class": "equity", "mega": true, "illiquid": false},
+    {"cashtag": "META", "name": "Meta", "asset_class": "equity", "mega": true, "illiquid": false},
+    {"cashtag": "SPY", "name": "S&P 500 ETF", "asset_class": "etf", "mega": true, "illiquid": false},
+    {"cashtag": "QQQ", "name": "Nasdaq 100 ETF", "asset_class": "etf", "mega": true, "illiquid": false},
+    {"cashtag": "BTC", "name": "Bitcoin", "asset_class": "crypto", "mega": true, "illiquid": false},
+    {"cashtag": "ETH", "name": "Ethereum", "asset_class": "crypto", "mega": true, "illiquid": false},
+    {"cashtag": "SOL", "name": "Solana (ambiguous vs equity)", "asset_class": "crypto", "mega": true, "illiquid": false, "notes": "collision-prone"},
+    {"cashtag": "AVGO", "name": "Broadcom", "asset_class": "equity", "mega": false, "illiquid": false},
+    {"cashtag": "TSM", "name": "TSMC", "asset_class": "equity", "mega": false, "illiquid": false},
+    {"cashtag": "SMCI", "name": "Super Micro", "asset_class": "equity", "mega": false, "illiquid": false},
+    {"cashtag": "ARM", "name": "Arm Holdings", "asset_class": "equity", "mega": false, "illiquid": false},
+    {"cashtag": "PLTR", "name": "Palantir", "asset_class": "equity", "mega": false, "illiquid": false},
+    {"cashtag": "BRK.B", "name": "Berkshire B", "asset_class": "equity", "mega": true, "illiquid": false},
+    {"cashtag": "XYZQ", "name": "Fake microcap used in fixtures", "asset_class": "equity", "mega": false, "illiquid": true},
+    {"cashtag": "PUMP", "name": "Fake OTC used in fixtures", "asset_class": "equity", "mega": false, "illiquid": true}
+  ]
+}

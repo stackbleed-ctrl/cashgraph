@@ -1,0 +1,542 @@
+{
+  "generated_at": "2026-09-01T16:38:23.762296Z",
+  "window_hours": 6,
+  "source": "fixture",
+  "nodes": [
+    {
+      "cashtag": "NVDA",
+      "mentions": 8,
+      "unique_authors": 8,
+      "first_timers": 8,
+      "first_timer_share": 1.0,
+      "baseline_unique": 1.14,
+      "unique_delta": 6.86,
+      "mega": true,
+      "illiquid": false
+    },
+    {
+      "cashtag": "AAPL",
+      "mentions": 5,
+      "unique_authors": 5,
+      "first_timers": 5,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.71,
+      "unique_delta": 4.29,
+      "mega": true,
+      "illiquid": false
+    },
+    {
+      "cashtag": "PUMP",
+      "mentions": 4,
+      "unique_authors": 4,
+      "first_timers": 4,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.57,
+      "unique_delta": 3.43,
+      "mega": false,
+      "illiquid": true
+    },
+    {
+      "cashtag": "XYZQ",
+      "mentions": 4,
+      "unique_authors": 4,
+      "first_timers": 4,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.57,
+      "unique_delta": 3.43,
+      "mega": false,
+      "illiquid": true
+    },
+    {
+      "cashtag": "TSLA",
+      "mentions": 3,
+      "unique_authors": 3,
+      "first_timers": 3,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.43,
+      "unique_delta": 2.57,
+      "mega": true,
+      "illiquid": false
+    },
+    {
+      "cashtag": "TSM",
+      "mentions": 2,
+      "unique_authors": 2,
+      "first_timers": 2,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.29,
+      "unique_delta": 1.71,
+      "mega": false,
+      "illiquid": false
+    },
+    {
+      "cashtag": "AVGO",
+      "mentions": 1,
+      "unique_authors": 1,
+      "first_timers": 1,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.14,
+      "unique_delta": 0.86,
+      "mega": false,
+      "illiquid": false
+    },
+    {
+      "cashtag": "SMCI",
+      "mentions": 1,
+      "unique_authors": 1,
+      "first_timers": 1,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.14,
+      "unique_delta": 0.86,
+      "mega": false,
+      "illiquid": false
+    },
+    {
+      "cashtag": "ARM",
+      "mentions": 1,
+      "unique_authors": 1,
+      "first_timers": 1,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.14,
+      "unique_delta": 0.86,
+      "mega": false,
+      "illiquid": false
+    },
+    {
+      "cashtag": "SPY",
+      "mentions": 1,
+      "unique_authors": 1,
+      "first_timers": 1,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.14,
+      "unique_delta": 0.86,
+      "mega": true,
+      "illiquid": false
+    },
+    {
+      "cashtag": "QQQ",
+      "mentions": 1,
+      "unique_authors": 1,
+      "first_timers": 1,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.14,
+      "unique_delta": 0.86,
+      "mega": true,
+      "illiquid": false
+    },
+    {
+      "cashtag": "SOL",
+      "mentions": 1,
+      "unique_authors": 1,
+      "first_timers": 1,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.14,
+      "unique_delta": 0.86,
+      "mega": true,
+      "illiquid": false
+    },
+    {
+      "cashtag": "BTC",
+      "mentions": 1,
+      "unique_authors": 1,
+      "first_timers": 1,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.14,
+      "unique_delta": 0.86,
+      "mega": true,
+      "illiquid": false
+    },
+    {
+      "cashtag": "BRK.B",
+      "mentions": 1,
+      "unique_authors": 1,
+      "first_timers": 1,
+      "first_timer_share": 1.0,
+      "baseline_unique": 0.14,
+      "unique_delta": 0.86,
+      "mega": true,
+      "illiquid": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "NVDA",
+      "target": "TSM",
+      "weight": 2.5,
+      "unique_authors": 2,
+      "posts": 2
+    },
+    {
+      "source": "NVDA",
+      "target": "PUMP",
+      "weight": 2.5,
+      "unique_authors": 2,
+      "posts": 2
+    },
+    {
+      "source": "AAPL",
+      "target": "XYZQ",
+      "weight": 2.5,
+      "unique_authors": 2,
+      "posts": 2
+    },
+    {
+      "source": "AVGO",
+      "target": "NVDA",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "AVGO",
+      "target": "TSM",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "NVDA",
+      "target": "SMCI",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "SMCI",
+      "target": "TSM",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "NVDA",
+      "target": "XYZQ",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "PUMP",
+      "target": "XYZQ",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "PUMP",
+      "target": "TSLA",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "ARM",
+      "target": "NVDA",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "AAPL",
+      "target": "QQQ",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "AAPL",
+      "target": "SPY",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "QQQ",
+      "target": "SPY",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "BTC",
+      "target": "SOL",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "TSLA",
+      "target": "XYZQ",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    },
+    {
+      "source": "AAPL",
+      "target": "PUMP",
+      "weight": 1.25,
+      "unique_authors": 1,
+      "posts": 1
+    }
+  ],
+  "piggybacks": [
+    {
+      "host": "NVDA",
+      "parasite": "PUMP",
+      "co_posts": 2,
+      "unique_authors": 2,
+      "score": 5.0,
+      "reason": "illiquid ticker co-mentioned with mega cashtag"
+    },
+    {
+      "host": "AAPL",
+      "parasite": "XYZQ",
+      "co_posts": 2,
+      "unique_authors": 2,
+      "score": 5.0,
+      "reason": "illiquid ticker co-mentioned with mega cashtag"
+    }
+  ],
+  "farms": [
+    {
+      "kind": "template",
+      "template": "$ticker $ticker moon setup join my room",
+      "score": 10.2,
+      "unique_authors": 3,
+      "posts": 3,
+      "handles": [
+        "alerts4u",
+        "room_alpha",
+        "room_bravo"
+      ],
+      "post_ids": [
+        "3",
+        "14",
+        "15"
+      ],
+      "reason": "same skeleton text across multiple accounts + invite/spam lexicon"
+    },
+    {
+      "kind": "burst",
+      "template": "@spray_cannon 3 posts / 10m",
+      "score": 4.5,
+      "unique_authors": 1,
+      "posts": 3,
+      "handles": [
+        "spray_cannon"
+      ],
+      "post_ids": [
+        "16",
+        "17",
+        "18"
+      ],
+      "reason": "single account fired 3 cashtag posts inside 10 minutes"
+    }
+  ],
+  "origins": [
+    {
+      "cashtag": "NVDA",
+      "post_id": "1",
+      "author_handle": "chip_notes",
+      "created_at": "2026-09-01T12:01:00Z",
+      "likes": 420,
+      "text": "Inference demand still the core of the $NVDA thesis. Supply chain tell is $TSM and $AVGO."
+    },
+    {
+      "cashtag": "TSM",
+      "post_id": "1",
+      "author_handle": "chip_notes",
+      "created_at": "2026-09-01T12:01:00Z",
+      "likes": 420,
+      "text": "Inference demand still the core of the $NVDA thesis. Supply chain tell is $TSM and $AVGO."
+    },
+    {
+      "cashtag": "AVGO",
+      "post_id": "1",
+      "author_handle": "chip_notes",
+      "created_at": "2026-09-01T12:01:00Z",
+      "likes": 420,
+      "text": "Inference demand still the core of the $NVDA thesis. Supply chain tell is $TSM and $AVGO."
+    },
+    {
+      "cashtag": "NVDA",
+      "post_id": "2",
+      "author_handle": "semi_desk",
+      "created_at": "2026-09-01T12:20:00Z",
+      "likes": 88,
+      "text": "$NVDA $TSM $SMCI — rack buildouts slipping but bookings are not."
+    },
+    {
+      "cashtag": "TSM",
+      "post_id": "2",
+      "author_handle": "semi_desk",
+      "created_at": "2026-09-01T12:20:00Z",
+      "likes": 88,
+      "text": "$NVDA $TSM $SMCI — rack buildouts slipping but bookings are not."
+    },
+    {
+      "cashtag": "SMCI",
+      "post_id": "2",
+      "author_handle": "semi_desk",
+      "created_at": "2026-09-01T12:20:00Z",
+      "likes": 88,
+      "text": "$NVDA $TSM $SMCI — rack buildouts slipping but bookings are not."
+    },
+    {
+      "cashtag": "NVDA",
+      "post_id": "3",
+      "author_handle": "alerts4u",
+      "created_at": "2026-09-01T12:22:00Z",
+      "likes": 2,
+      "text": "$NVDA $PUMP moon setup join my room"
+    },
+    {
+      "cashtag": "PUMP",
+      "post_id": "3",
+      "author_handle": "alerts4u",
+      "created_at": "2026-09-01T12:22:00Z",
+      "likes": 2,
+      "text": "$NVDA $PUMP moon setup join my room"
+    },
+    {
+      "cashtag": "PUMP",
+      "post_id": "4",
+      "author_handle": "signalsdaily",
+      "created_at": "2026-09-01T12:23:00Z",
+      "likes": 1,
+      "text": "Huge breakout $NVDA $PUMP $XYZQ"
+    },
+    {
+      "cashtag": "XYZQ",
+      "post_id": "4",
+      "author_handle": "signalsdaily",
+      "created_at": "2026-09-01T12:23:00Z",
+      "likes": 1,
+      "text": "Huge breakout $NVDA $PUMP $XYZQ"
+    },
+    {
+      "cashtag": "PUMP",
+      "post_id": "5",
+      "author_handle": "free_calls",
+      "created_at": "2026-09-01T12:24:00Z",
+      "likes": 0,
+      "text": "$TSLA $PUMP last chance"
+    },
+    {
+      "cashtag": "TSLA",
+      "post_id": "5",
+      "author_handle": "free_calls",
+      "created_at": "2026-09-01T12:24:00Z",
+      "likes": 0,
+      "text": "$TSLA $PUMP last chance"
+    },
+    {
+      "cashtag": "XYZQ",
+      "post_id": "14",
+      "author_handle": "room_alpha",
+      "created_at": "2026-09-01T12:25:00Z",
+      "likes": 0,
+      "text": "$TSLA $XYZQ moon setup join my room"
+    },
+    {
+      "cashtag": "TSLA",
+      "post_id": "14",
+      "author_handle": "room_alpha",
+      "created_at": "2026-09-01T12:25:00Z",
+      "likes": 0,
+      "text": "$TSLA $XYZQ moon setup join my room"
+    },
+    {
+      "cashtag": "AAPL",
+      "post_id": "15",
+      "author_handle": "room_bravo",
+      "created_at": "2026-09-01T12:26:00Z",
+      "likes": 1,
+      "text": "https://spam.example $AAPL $PUMP moon setup join my room"
+    },
+    {
+      "cashtag": "ARM",
+      "post_id": "6",
+      "author_handle": "first_time_nvda",
+      "created_at": "2026-09-01T13:00:00Z",
+      "likes": 12,
+      "text": "just opened $NVDA after that clip. also watching $ARM"
+    },
+    {
+      "cashtag": "SPY",
+      "post_id": "8",
+      "author_handle": "index_only",
+      "created_at": "2026-09-01T13:10:00Z",
+      "likes": 55,
+      "text": "$SPY and $QQQ both bid into the close. $AAPL dead money."
+    },
+    {
+      "cashtag": "QQQ",
+      "post_id": "8",
+      "author_handle": "index_only",
+      "created_at": "2026-09-01T13:10:00Z",
+      "likes": 55,
+      "text": "$SPY and $QQQ both bid into the close. $AAPL dead money."
+    },
+    {
+      "cashtag": "AAPL",
+      "post_id": "8",
+      "author_handle": "index_only",
+      "created_at": "2026-09-01T13:10:00Z",
+      "likes": 55,
+      "text": "$SPY and $QQQ both bid into the close. $AAPL dead money."
+    },
+    {
+      "cashtag": "SOL",
+      "post_id": "9",
+      "author_handle": "onchain_sam",
+      "created_at": "2026-09-01T13:12:00Z",
+      "likes": 70,
+      "text": "$SOL funding flipped. $BTC lagging."
+    },
+    {
+      "cashtag": "BTC",
+      "post_id": "9",
+      "author_handle": "onchain_sam",
+      "created_at": "2026-09-01T13:12:00Z",
+      "likes": 70,
+      "text": "$SOL funding flipped. $BTC lagging."
+    },
+    {
+      "cashtag": "BRK.B",
+      "post_id": "11",
+      "author_handle": "value_acct",
+      "created_at": "2026-09-01T13:15:00Z",
+      "likes": 19,
+      "text": "Still prefer $BRK.B over most of this circus."
+    },
+    {
+      "cashtag": "XYZQ",
+      "post_id": "12",
+      "author_handle": "xyzq_bot",
+      "created_at": "2026-09-01T13:16:00Z",
+      "likes": 0,
+      "text": "$AAPL $XYZQ undervalued gem"
+    },
+    {
+      "cashtag": "AAPL",
+      "post_id": "12",
+      "author_handle": "xyzq_bot",
+      "created_at": "2026-09-01T13:16:00Z",
+      "likes": 0,
+      "text": "$AAPL $XYZQ undervalued gem"
+    },
+    {
+      "cashtag": "TSLA",
+      "post_id": "17",
+      "author_handle": "spray_cannon",
+      "created_at": "2026-09-01T13:41:00Z",
+      "likes": 0,
+      "text": "$TSLA add"
+    }
+  ],
+  "warnings": [
+    "every author looks like a first-timer — store was empty. run again over days before trusting unique_delta",
+    "2 farm cluster(s) — treat unique_author counts as inflated"
+  ]
+}

@@ -1,0 +1,37 @@
+name: pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+      # Default Pages build is fixture on purpose.
+      # Live X would need X_BEARER_TOKEN and would publish third-party posts.
+      - run: python -m cashgraph.cli --source fixture --out public --store /tmp/cashgraph-state.sqlite
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.pub.outputs.page_url }}
+    steps:
+      - id: pub
+        uses: actions/deploy-pages@v4

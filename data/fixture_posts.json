@@ -1,0 +1,165 @@
+[
+  {
+    "id": "1",
+    "author_id": "u_research",
+    "author_handle": "chip_notes",
+    "text": "Inference demand still the core of the $NVDA thesis. Supply chain tell is $TSM and $AVGO.",
+    "created_at": "2026-09-01T12:01:00+00:00",
+    "likes": 420,
+    "reposts": 31,
+    "is_reply": false
+  },
+  {
+    "id": "2",
+    "author_id": "u_research2",
+    "author_handle": "semi_desk",
+    "text": "$NVDA $TSM $SMCI — rack buildouts slipping but bookings are not.",
+    "created_at": "2026-09-01T12:20:00+00:00",
+    "likes": 88,
+    "is_reply": false
+  },
+  {
+    "id": "3",
+    "author_id": "u_farm1",
+    "author_handle": "alerts4u",
+    "text": "$NVDA $PUMP moon setup join my room",
+    "created_at": "2026-09-01T12:22:00+00:00",
+    "likes": 2,
+    "is_reply": false
+  },
+  {
+    "id": "4",
+    "author_id": "u_farm2",
+    "author_handle": "signalsdaily",
+    "text": "Huge breakout $NVDA $PUMP $XYZQ",
+    "created_at": "2026-09-01T12:23:00+00:00",
+    "likes": 1,
+    "is_reply": false
+  },
+  {
+    "id": "5",
+    "author_id": "u_farm3",
+    "author_handle": "free_calls",
+    "text": "$TSLA $PUMP last chance",
+    "created_at": "2026-09-01T12:24:00+00:00",
+    "likes": 0,
+    "is_reply": false
+  },
+  {
+    "id": "6",
+    "author_id": "u_new1",
+    "author_handle": "first_time_nvda",
+    "text": "just opened $NVDA after that clip. also watching $ARM",
+    "created_at": "2026-09-01T13:00:00+00:00",
+    "likes": 12,
+    "is_reply": false
+  },
+  {
+    "id": "7",
+    "author_id": "u_new2",
+    "author_handle": "lurker99",
+    "text": "$NVDA going parabolic?",
+    "created_at": "2026-09-01T13:05:00+00:00",
+    "likes": 4,
+    "is_reply": false
+  },
+  {
+    "id": "8",
+    "author_id": "u_macro",
+    "author_handle": "index_only",
+    "text": "$SPY and $QQQ both bid into the close. $AAPL dead money.",
+    "created_at": "2026-09-01T13:10:00+00:00",
+    "likes": 55,
+    "is_reply": false
+  },
+  {
+    "id": "9",
+    "author_id": "u_crypto",
+    "author_handle": "onchain_sam",
+    "text": "$SOL funding flipped. $BTC lagging.",
+    "created_at": "2026-09-01T13:12:00+00:00",
+    "likes": 70,
+    "is_reply": false
+  },
+  {
+    "id": "10",
+    "author_id": "u_reply",
+    "author_handle": "noise",
+    "text": "wrong $NVDA is finished",
+    "created_at": "2026-09-01T13:13:00+00:00",
+    "likes": 0,
+    "is_reply": true
+  },
+  {
+    "id": "11",
+    "author_id": "u_brk",
+    "author_handle": "value_acct",
+    "text": "Still prefer $BRK.B over most of this circus.",
+    "created_at": "2026-09-01T13:15:00+00:00",
+    "likes": 19,
+    "is_reply": false
+  },
+  {
+    "id": "12",
+    "author_id": "u_farm4",
+    "author_handle": "xyzq_bot",
+    "text": "$AAPL $XYZQ undervalued gem",
+    "created_at": "2026-09-01T13:16:00+00:00",
+    "likes": 0,
+    "is_reply": false
+  },
+  {
+    "id": "13",
+    "author_id": "u_farm5",
+    "author_handle": "xyzq_bot2",
+    "text": "why isn't anyone talking $AAPL $XYZQ",
+    "created_at": "2026-09-01T13:17:00+00:00",
+    "likes": 0,
+    "is_reply": false
+  },
+  {
+    "id": "14",
+    "author_id": "u_farm6",
+    "author_handle": "room_alpha",
+    "text": "$TSLA $XYZQ moon setup join my room",
+    "created_at": "2026-09-01T12:25:00+00:00",
+    "likes": 0,
+    "is_reply": false
+  },
+  {
+    "id": "15",
+    "author_id": "u_farm7",
+    "author_handle": "room_bravo",
+    "text": "https://spam.example $AAPL $PUMP moon setup join my room",
+    "created_at": "2026-09-01T12:26:00+00:00",
+    "likes": 1,
+    "is_reply": false
+  },
+  {
+    "id": "16",
+    "author_id": "u_burst",
+    "author_handle": "spray_cannon",
+    "text": "$NVDA add",
+    "created_at": "2026-09-01T13:40:00+00:00",
+    "likes": 0,
+    "is_reply": false
+  },
+  {
+    "id": "17",
+    "author_id": "u_burst",
+    "author_handle": "spray_cannon",
+    "text": "$TSLA add",
+    "created_at": "2026-09-01T13:41:00+00:00",
+    "likes": 0,
+    "is_reply": false
+  },
+  {
+    "id": "18",
+    "author_id": "u_burst",
+    "author_handle": "spray_cannon",
+    "text": "$AAPL add",
+    "created_at": "2026-09-01T13:42:00+00:00",
+    "likes": 0,
+    "is_reply": false
+  }
+]

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>cashgraph</title>
+<style>
+  :root { color-scheme: dark; }
+  body { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+         background:#0b0d10; color:#e8edf2; margin:0; padding:24px; }
+  h1 { font-size:20px; letter-spacing:.08em; }
+  h2 { font-size:15px; margin-top:28px; }
+  .muted { color:#8b98a5; font-size:12px; }
+  .warn { color:#f3c14e; }
+  table { border-collapse:collapse; width:100%; margin:16px 0 32px; font-size:13px; }
+  th,td { text-align:left; padding:6px 8px; border-bottom:1px solid #1c242c; vertical-align:top; }
+  th { color:#8b98a5; font-weight:500; }
+  .mega { color:#6ee7b7; }
+  .illiquid { color:#f87171; }
+  .tag { color:#7dd3fc; }
+  .farm { color:#fb923c; }
+</style>
+</head>
+<body>
+<h1>$GRAPH</h1>
+<p class="muted">generated 2026-09-01T16:38:23.762296+00:00 · source fixture · window 6h · attention topology, not a price forecast</p>
+<p class="warn">warning: every author looks like a first-timer — store was empty. run again over days before trusting unique_delta</p><p class="warn">warning: 2 farm cluster(s) — treat unique_author counts as inflated</p>
+<h2>nodes</h2>
+<table>
+<tr><th>cashtag</th><th>mentions</th><th>unique</th><th>first-timers</th><th>ft share</th><th>Δ vs ~7d/7</th><th>flags</th></tr>
+<tr><td class='tag'>$NVDA</td><td>8</td><td>8</td><td>8</td><td>1.00</td><td>+6.9</td><td>mega </td></tr>
+<tr><td class='tag'>$AAPL</td><td>5</td><td>5</td><td>5</td><td>1.00</td><td>+4.3</td><td>mega </td></tr>
+<tr><td class='tag'>$PUMP</td><td>4</td><td>4</td><td>4</td><td>1.00</td><td>+3.4</td><td>illiquid</td></tr>
+<tr><td class='tag'>$XYZQ</td><td>4</td><td>4</td><td>4</td><td>1.00</td><td>+3.4</td><td>illiquid</td></tr>
+<tr><td class='tag'>$TSLA</td><td>3</td><td>3</td><td>3</td><td>1.00</td><td>+2.6</td><td>mega </td></tr>
+<tr><td class='tag'>$TSM</td><td>2</td><td>2</td><td>2</td><td>1.00</td><td>+1.7</td><td></td></tr>
+<tr><td class='tag'>$AVGO</td><td>1</td><td>1</td><td>1</td><td>1.00</td><td>+0.9</td><td></td></tr>
+<tr><td class='tag'>$SMCI</td><td>1</td><td>1</td><td>1</td><td>1.00</td><td>+0.9</td><td></td></tr>
+<tr><td class='tag'>$ARM</td><td>1</td><td>1</td><td>1</td><td>1.00</td><td>+0.9</td><td></td></tr>
+<tr><td class='tag'>$SPY</td><td>1</td><td>1</td><td>1</td><td>1.00</td><td>+0.9</td><td>mega </td></tr>
+<tr><td class='tag'>$QQQ</td><td>1</td><td>1</td><td>1</td><td>1.00</td><td>+0.9</td><td>mega </td></tr>
+<tr><td class='tag'>$SOL</td><td>1</td><td>1</td><td>1</td><td>1.00</td><td>+0.9</td><td>mega </td></tr>
+<tr><td class='tag'>$BTC</td><td>1</td><td>1</td><td>1</td><td>1.00</td><td>+0.9</td><td>mega </td></tr>
+<tr><td class='tag'>$BRK.B</td><td>1</td><td>1</td><td>1</td><td>1.00</td><td>+0.9</td><td>mega </td></tr>
+</table>
+<h2>co-occurrence</h2>
+<table>
+<tr><th>source</th><th>target</th><th>weight</th><th>authors</th><th>posts</th></tr>
+<tr><td>$NVDA</td><td>$TSM</td><td>2.5</td><td>2</td><td>2</td></tr>
+<tr><td>$NVDA</td><td>$PUMP</td><td>2.5</td><td>2</td><td>2</td></tr>
+<tr><td>$AAPL</td><td>$XYZQ</td><td>2.5</td><td>2</td><td>2</td></tr>
+<tr><td>$AVGO</td><td>$NVDA</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$AVGO</td><td>$TSM</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$NVDA</td><td>$SMCI</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$SMCI</td><td>$TSM</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$NVDA</td><td>$XYZQ</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$PUMP</td><td>$XYZQ</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$PUMP</td><td>$TSLA</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$ARM</td><td>$NVDA</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$AAPL</td><td>$QQQ</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$AAPL</td><td>$SPY</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$QQQ</td><td>$SPY</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$BTC</td><td>$SOL</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$TSLA</td><td>$XYZQ</td><td>1.25</td><td>1</td><td>1</td></tr>
+<tr><td>$AAPL</td><td>$PUMP</td><td>1.25</td><td>1</td><td>1</td></tr>
+</table>
+<h2>piggyback radar</h2>
+<table>
+<tr><th>host</th><th>parasite</th><th>score</th><th>authors</th><th>reason</th></tr>
+<tr><td class='mega'>$NVDA</td><td class='illiquid'>$PUMP</td><td>5.0</td><td>2</td><td>illiquid ticker co-mentioned with mega cashtag</td></tr>
+<tr><td class='mega'>$AAPL</td><td class='illiquid'>$XYZQ</td><td>5.0</td><td>2</td><td>illiquid ticker co-mentioned with mega cashtag</td></tr>
+</table>
+<h2>farm clusters</h2>
+<table>
+<tr><th>kind</th><th>score</th><th>authors</th><th>posts</th><th>handles</th><th>template / reason</th></tr>
+<tr><td class='farm'>template</td><td>10.2</td><td>3</td><td>3</td><td>@alerts4u, @room_alpha, @room_bravo</td><td>$ticker $ticker moon setup join my room — same skeleton text across multiple accounts + invite/spam lexicon</td></tr>
+<tr><td class='farm'>burst</td><td>4.5</td><td>1</td><td>3</td><td>@spray_cannon</td><td>@spray_cannon 3 posts / 10m — single account fired 3 cashtag posts inside 10 minutes</td></tr>
+</table>
+<h2>earliest non-reply origins</h2>
+<table>
+<tr><th>cashtag</th><th>when</th><th>account</th><th>likes</th><th>text</th></tr>
+<tr><td>$NVDA</td><td>2026-09-01T12:01:00+00:00</td><td>@chip_notes</td><td>420</td><td>Inference demand still the core of the $NVDA thesis. Supply chain tell is $TSM and $AVGO.</td></tr>
+<tr><td>$TSM</td><td>2026-09-01T12:01:00+00:00</td><td>@chip_notes</td><td>420</td><td>Inference demand still the core of the $NVDA thesis. Supply chain tell is $TSM and $AVGO.</td></tr>
+<tr><td>$AVGO</td><td>2026-09-01T12:01:00+00:00</td><td>@chip_notes</td><td>420</td><td>Inference demand still the core of the $NVDA thesis. Supply chain tell is $TSM and $AVGO.</td></tr>
+<tr><td>$NVDA</td><td>2026-09-01T12:20:00+00:00</td><td>@semi_desk</td><td>88</td><td>$NVDA $TSM $SMCI — rack buildouts slipping but bookings are not.</td></tr>
+<tr><td>$TSM</td><td>2026-09-01T12:20:00+00:00</td><td>@semi_desk</td><td>88</td><td>$NVDA $TSM $SMCI — rack buildouts slipping but bookings are not.</td></tr>
+<tr><td>$SMCI</td><td>2026-09-01T12:20:00+00:00</td><td>@semi_desk</td><td>88</td><td>$NVDA $TSM $SMCI — rack buildouts slipping but bookings are not.</td></tr>
+<tr><td>$NVDA</td><td>2026-09-01T12:22:00+00:00</td><td>@alerts4u</td><td>2</td><td>$NVDA $PUMP moon setup join my room</td></tr>
+<tr><td>$PUMP</td><td>2026-09-01T12:22:00+00:00</td><td>@alerts4u</td><td>2</td><td>$NVDA $PUMP moon setup join my room</td></tr>
+<tr><td>$PUMP</td><td>2026-09-01T12:23:00+00:00</td><td>@signalsdaily</td><td>1</td><td>Huge breakout $NVDA $PUMP $XYZQ</td></tr>
+<tr><td>$XYZQ</td><td>2026-09-01T12:23:00+00:00</td><td>@signalsdaily</td><td>1</td><td>Huge breakout $NVDA $PUMP $XYZQ</td></tr>
+<tr><td>$PUMP</td><td>2026-09-01T12:24:00+00:00</td><td>@free_calls</td><td>0</td><td>$TSLA $PUMP last chance</td></tr>
+<tr><td>$TSLA</td><td>2026-09-01T12:24:00+00:00</td><td>@free_calls</td><td>0</td><td>$TSLA $PUMP last chance</td></tr>
+<tr><td>$XYZQ</td><td>2026-09-01T12:25:00+00:00</td><td>@room_alpha</td><td>0</td><td>$TSLA $XYZQ moon setup join my room</td></tr>
+<tr><td>$TSLA</td><td>2026-09-01T12:25:00+00:00</td><td>@room_alpha</td><td>0</td><td>$TSLA $XYZQ moon setup join my room</td></tr>
+<tr><td>$AAPL</td><td>2026-09-01T12:26:00+00:00</td><td>@room_bravo</td><td>1</td><td>https://spam.example $AAPL $PUMP moon setup join my room</td></tr>
+<tr><td>$ARM</td><td>2026-09-01T13:00:00+00:00</td><td>@first_time_nvda</td><td>12</td><td>just opened $NVDA after that clip. also watching $ARM</td></tr>
+<tr><td>$SPY</td><td>2026-09-01T13:10:00+00:00</td><td>@index_only</td><td>55</td><td>$SPY and $QQQ both bid into the close. $AAPL dead money.</td></tr>
+<tr><td>$QQQ</td><td>2026-09-01T13:10:00+00:00</td><td>@index_only</td><td>55</td><td>$SPY and $QQQ both bid into the close. $AAPL dead money.</td></tr>
+<tr><td>$AAPL</td><td>2026-09-01T13:10:00+00:00</td><td>@index_only</td><td>55</td><td>$SPY and $QQQ both bid into the close. $AAPL dead money.</td></tr>
+<tr><td>$SOL</td><td>2026-09-01T13:12:00+00:00</td><td>@onchain_sam</td><td>70</td><td>$SOL funding flipped. $BTC lagging.</td></tr>
+<tr><td>$BTC</td><td>2026-09-01T13:12:00+00:00</td><td>@onchain_sam</td><td>70</td><td>$SOL funding flipped. $BTC lagging.</td></tr>
+<tr><td>$BRK.B</td><td>2026-09-01T13:15:00+00:00</td><td>@value_acct</td><td>19</td><td>Still prefer $BRK.B over most of this circus.</td></tr>
+<tr><td>$XYZQ</td><td>2026-09-01T13:16:00+00:00</td><td>@xyzq_bot</td><td>0</td><td>$AAPL $XYZQ undervalued gem</td></tr>
+<tr><td>$AAPL</td><td>2026-09-01T13:16:00+00:00</td><td>@xyzq_bot</td><td>0</td><td>$AAPL $XYZQ undervalued gem</td></tr>
+<tr><td>$TSLA</td><td>2026-09-01T13:41:00+00:00</td><td>@spray_cannon</td><td>0</td><td>$TSLA add</td></tr>
+</table>
+</body></html>
